@@ -49,7 +49,10 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
         preciotemp.put(2,Long.parseLong("35000"));
         preciotemp.put(3,Long.parseLong("20000"));
         Usuario u= new Usuario("cristiansoto", "Christian Soto", "password","csoto@mail.com", "viajero", Long.parseLong("320323342"),tourtemp, "");
+        Usuario u1= new Usuario("sergioperez", "Sergio Perez", "password","sgperez@mail.com", "guia", Long.parseLong("3145346578"),tourtemp, "");
+
         usuarios.add(u);
+         usuarios.add(u1);
         tours.add(t);
         
     }
