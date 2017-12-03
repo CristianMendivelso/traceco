@@ -1,0 +1,94 @@
+<html>
+
+    <head>
+        <title>Client</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+        <script src="model.js"></script>
+        <script src="controller.js"></script>
+
+    </head>
+
+
+
+    <body>
+
+        <div class="container">
+
+            <header>
+                <h1>TITLE</h1>
+                <div id="menusuperior">
+                    Author Name: <input type="text" id="authorName" name="authorName" value="">
+                    <button type="button" class="button" onclick="getBlueprintsByAuthor()">Load</button>            
+                </div>
+            </header>
+
+            
+            <div id="leftPart">
+            
+            <nav>
+                <h2>Blueprints</h2>
+                
+                    <div id="contenido" >
+
+            <h1 id="tablenum">Sin autor seleccionado </h1>
+            <table id="tablablueprints" >
+  
+            </table>
+
+        
+        </div>
+                
+                <br><br>
+                    <img id="basura"
+                        src="images/basura.png"
+                        width="60" height="75"
+                        alt="a cute kitten">
+            </nav>
+
+</div>
+
+                <div id="RightPart">
+                    <h3 id="titleofcanvas"></h3>
+                    <canvas id="Canvas" width="600" height="400" style="border:1px solid #d3d3d3;">
+                        Your browser does not support the HTML5 canvas tag.
+                    </canvas>
+                    <br>
+                    <button id="btn" class="button">Create new</button>
+                    <button class="button" onclick="save()">Save/Update</button>
+                    
+                    
+                </div>
+                    
+                    </div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div  class="modal-content">
+    <div class="modal-body">
+      <span class="close">&times;</span>
+      <h3>Add name: </h3>
+      <input id="newName">
+    </div>
+	<button id="createnew" onclick="crearnuevo()">Create</button>
+    <br><br>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+                    </body>
+                    
+  
+
+                    </html>
