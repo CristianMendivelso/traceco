@@ -147,7 +147,12 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
     public void ComprarTour(Tour t,String username){
    
         int index=0;
+        int indexfecha=0;
+        int indextour=0;
         Usuario temp=null;
+        Tour temp2=null;
+        ArrayList<Fecha> fechas=null;
+
         for (int i=0;i<usuarios.size();i++){
             if(usuarios.get(i).getUsername().equals(username)){
                 temp=usuarios.get(i);
@@ -158,6 +163,24 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
                 break;
             }
         }
+        for (int i=0;i<tours.size();i++){
+            if(tours.get(i).getUsername().equals(t.getUsername()) && tours.get(i).getLugar().equals(t.getLugar()) ){
+                temp2=tours.get(i);
+                indextour=i;
+                fechas= temp2.getFechas();
+                for (int j=0;j<fechas.size();j++){
+                    if (fechas.get(j).getFecha().equals(t.getDescription())){
+                        indexfecha=j;
+                        break;
+                    }
+                }
+                fechas.remove(indexfecha);
+                temp2.setFechas(fechas);
+                break;
+            }
+        }
+        tours.remove(indextour);
+        tours.add(temp2);
         usuarios.remove(index);
         usuarios.add(temp);
     }
