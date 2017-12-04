@@ -43,6 +43,10 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
         fechatemp.add(f1);
         fechatemp.add(f2);
         HashMap<Integer,Long> preciotemp= new HashMap<Integer,Long> ();
+        preciotemp.put(1,Long.parseLong("20000"));
+        preciotemp.put(2,Long.parseLong("40000"));
+        preciotemp.put(3,Long.parseLong("50000"));
+        
         Tour t= new Tour(0, preciotemp, "Alumbrado Nocturno Cali", "Disfruta del recorrido por el alumbrado navideño", fechatemp, "carlosr", "https://i.ytimg.com/vi/NtCOOhxS1s8/maxresdefault.jpg", 60);
         Tour t2= new Tour(0, preciotemp, "Recorrido Diurno Cali", "Viaje En Coche Por la Ciudad", fechatemp, "carlosr", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Augusto_Ilian_Rio_Cali_Cali.jpg/210px-Augusto_Ilian_Rio_Cali_Cali.jpg", 60);
         tourtemp.add(t);
