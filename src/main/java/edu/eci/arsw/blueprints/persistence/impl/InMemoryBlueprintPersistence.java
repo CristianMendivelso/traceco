@@ -37,7 +37,7 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
         ArrayList<Tour> tourtemp= new ArrayList<Tour>();
         ArrayList<Fecha> fechatemp= new ArrayList<Fecha>();
         HashMap<Integer,Long> preciotemp= new HashMap<Integer,Long> ();
-        Tour t= new Tour(0, preciotemp, "Alumbrado Nocturno Cali", "Disfruta del recorrido por el alumbrado navideño", fechatemp, "sergioperez", "", 60);
+        Tour t= new Tour(0, preciotemp, "Alumbrado Nocturno Cali", "Disfruta del recorrido por el alumbrado navideño", fechatemp, "sergioperez", "https://i.ytimg.com/vi/NtCOOhxS1s8/maxresdefault.jpg", 60);
         tourtemp.add(t);
         Fecha f= new Fecha(0, 0, "23-12-2017 18:00");
         Fecha f1= new Fecha(1, 0, "22-12-2017 18:00");
@@ -48,8 +48,8 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
         preciotemp.put(1,Long.parseLong("20000"));
         preciotemp.put(2,Long.parseLong("35000"));
         preciotemp.put(3,Long.parseLong("20000"));
-        Usuario u= new Usuario("cristiansoto", "Christian Soto", "password","csoto@mail.com", "viajero", Long.parseLong("320323342"),tourtemp, "");
-        Usuario u1= new Usuario("sergioperez", "Sergio Perez", "password","sgperez@mail.com", "guia", Long.parseLong("3145346578"),tourtemp, "");
+        Usuario u= new Usuario("cristiansoto", "Christian Soto", "password","csoto@mail.com", "viajero", Long.parseLong("320323342"),tourtemp, "https://www.definicionabc.com/wp-content/uploads/social/Viajero-2-turismo.jpg");
+        Usuario u1= new Usuario("sergioperez", "Sergio Perez", "password","sgperez@mail.com", "guia", Long.parseLong("3145346578"),tourtemp, "http://www.cechotec.cl/web/media/producto/p/59/59-producto_large_92fb5485d7.jpg");
 
         usuarios.add(u);
          usuarios.add(u1);
